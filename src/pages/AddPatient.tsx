@@ -559,7 +559,17 @@ const AddPatient: React.FC = () => {
         <input type="password" placeholder="Patient Password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full p-2 border rounded" required />
         <input type="text" placeholder="Disease Name" value={diseaseName} onChange={(e) => setDiseaseName(e.target.value)} className="w-full p-2 border rounded" required />
         <input type="text" placeholder="Expected Recovery Time" value={expectedRecoveryTime} onChange={(e) => setExpectedRecoveryTime(e.target.value)} className="w-full p-2 border rounded" required />
-        <input type="date" placeholder="Follow-up Date" value={followUpDate} onChange={(e) => setFollowUpDate(e.target.value)} className="w-full p-2 border rounded" required />
+        {/* <input type="date" placeholder="Follow-up Date" value={followUpDate} onChange={(e) => setFollowUpDate(e.target.value)} className="w-full p-2 border rounded" required /> */}
+        <label className="block font-semibold">Follow-up Date</label>
+<input
+  type="date"
+  placeholder="Follow-up Date"
+  value={followUpDate}
+  onChange={(e) => setFollowUpDate(e.target.value)}
+  className="w-full p-2 border rounded"
+  required
+/>
+
 
         <label className="block font-semibold">Medicines</label>
         {medicines.map((med, index) => (
